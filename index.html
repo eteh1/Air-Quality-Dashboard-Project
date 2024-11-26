@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Air Quality Monitoring Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Air Quality Monitoring Dashboard</h1>
+            <p>Real-time air quality data across different cities</p>
+        </header>
+
+        <div class="controls">
+            <label for="city-selector">Select City: </label>
+            <select id="city-selector">
+                <!-- Cities will be populated dynamically -->
+            </select>
+        </div>
+
+        <div class="data-display">
+            <div class="card">
+                <h3>Air Quality Index (AQI)</h3>
+                <p id="aqi">Loading...</p>
+            </div>
+            <div class="card">
+                <h3>PM2.5 Level</h3>
+                <p id="pm25">Loading...</p>
+            </div>
+            <div class="card">
+                <h3>Temperature</h3>
+                <p id="temperature">Loading...</p>
+            </div>
+        </div>
+
+        <div id="map"></div>
+
+        <footer>
+            <p>Data provided by <a href="https://www.openweathermap.org" target="_blank">OpenWeatherMap API</a></p>
+        </footer>
+    </div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
